@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik';
+}
+
+.container {
+    max-width: 1040px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.site-header {
+    padding: 20px 0;
+}
+
+.site-header__inner {
+    display: flex;
+    align-items: center;
+}
+
+.site-header__title {
+    font-size: 26px;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.site-header__btn {
+    border: none;
+    background-color: transparent;
+    color: #333333;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.site-header__btn:hover {
+    color: #000;
+}
+.contact-me {
+    margin: 0 30px 0 auto;
+}
+
+.menu {
+    display: none;
+}
+
+.hero {
+    padding: 70px 0 0;
+}
+.hero__top {
+    display: flex;
+}
+
+.hero__img {
+    max-width: 180px;
+    border-radius: 50%;
+}
+
+.hero__abouts {
+    margin-left: 40px;
+}
+.hero__name {
+    font-size: 38px;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.hero__status {
+    margin: 5px 0 20px;
+    color: #333;
+    opacity: 0.8;
+    font-size: 24px;
+}
+
+.hero__socillink {
+    margin: 0 20px 0 0;
+    background-image: url('../images/free-icon-github-2111432.png');
+    padding: 6px 15px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero__socillink:nth-child(2) {
+    background-image: url('../images/facebook.png');
+}
+.hero__socillink:nth-child(3) {
+    background-image: url('../images/free-icon-linkedin-1384014.png');
+}
+.hero__socillink:nth-child(4) {
+    background-image: url('../images/telegram.png');
+}
+
+
+.hero__bottom {
+    padding: 30px 0 0;
+}
+
+.hero__aforizm {
+    display: block;
+    margin: 0 0 20px;
+    font-size: 24px;
+    color: #333;
+    opacity: 0.7;
+}
+
+.hero__bottom__linkbox {
+    display: flex;
+    align-items: center;
+}
+
+.hero__about, .hero__skills {
+    max-width: 130px;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    text-decoration: none;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.hero__skills {
+    margin-right: 10px;
+    color: #fff;
+    background-color: #1E90FF;
+}
+
+.hero__skills:hover {
+    background-color: #fff;
+    color: #1E90FF;
+    border-color: #1E90FF;
+}
+
+.hero__about {
+    background-color: #fff;
+    color: #1E90FF;
+    border-color: #1E90FF;
+}
+.hero__about:hover {
+    color: #fff;
+    background-color: #1E90FF;
+}
+
+.mobile-nav {
+    display: none;
+}
+
+
+
+@media only screen and (max-width: 576px) {
+    .site-header__btn {
+        display: none;
+    }
+
+    .site-header__title {
+        font-size: 24px;
+    }
+
+    .menu {
+        display: block;
+        margin-left: auto;
+        padding: 12px;
+        background-image: url('../images/free-icon-menu-9294932.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .menu-bg {
+        background-image: url('../images/cross-button.png');
+    }
+
+    .mobile-nav {
+        display: none;
+        position: fixed;
+        width: 100%;
+        z-index: 3;
+        background-color:#fff;
+    }
+    @keyframes open {
+        0% {
+            height: 0;
+        }
+        100% {
+            height: 70px;
+        }
+    }
+
+    .blur {
+        filter: blur(5px);
+    }
+    .height {
+        height: 70px;
+        display: block;
+        overflow: hidden;
+        animation-name: open;
+        animation-timing-function: ease;
+        animation-duration: 500ms;
+    }
+    .mobile-nav__list {
+        margin: 15px 0 0;
+        padding: 0 10px 20px;
+        list-style-type: none;
+    }
+    .mobile-nav__item:first-child {
+        margin-bottom: 5px;
+    }
+
+    .mobile-nav__link {
+        text-decoration: none;
+        transition: all 0.1s linear;
+        border-bottom: 2px solid transparent;
+    }
+    .mobile-nav__link:hover {
+        border-bottom: 2px solid #333;
+    }
+
+    .hero {
+        padding: 20px 0 30px;
+    }
+    .hero__top {
+        flex-direction: column;
+    }
+
+    .hero__img {
+        max-width: 120px;
+    }
+
+    .hero__abouts {
+        margin-left: 0;
+    }
+    .hero__name {
+        font-size: 24px;
+    }
+
+    .hero__status {
+        font-size: 20px;
+    }
+
+    .hero__socillink {
+        padding: 5px 14px;
+    }
+
+    .hero__aforizm {
+        font-size: 18px;
+    }
+}
