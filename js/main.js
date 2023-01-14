@@ -1,13 +1,20 @@
-let hero = document.querySelector('.hero');
-let about = document.querySelector('.skills');
-let skills = document.querySelector('.about');
 let menuBtn = document.querySelector('.menu');
-let siteHeader = document.querySelector('.mobile-nav')
+let mobileNav = document.querySelector('.mobile-nav');
+let elMain = document.querySelector('main')
 
 menuBtn.addEventListener('click', () => {
-    hero.classList.toggle('blur');
-    skills.classList.toggle('blur');
-    about.classList.toggle('blur');
-    siteHeader.classList.toggle('height');
+    elMain.classList.toggle('blur');
     menuBtn.classList.toggle('menu-bg');
+    mobileNav.classList.toggle('height');
+})
+
+mobileNav.addEventListener('click', () => { 
+    elMain.classList.remove('blur');
+    menuBtn.classList.remove('menu-bg');
+    mobileNav.classList.remove('height');
+})
+
+elMain.addEventListener('click', () => {
+    mobileNav.classList.remove('height');
+    elMain.classList.remove('blur');
 })
