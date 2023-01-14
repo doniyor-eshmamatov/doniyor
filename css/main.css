@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -17,6 +18,7 @@ body {
 
 .site-header {
     padding: 20px 0;
+    border-bottom: 1px solid rgb(128, 128, 128, 0.5);
 }
 
 .site-header__inner {
@@ -50,6 +52,7 @@ body {
 
 .menu {
     display: none;
+    outline: none;
 }
 
 .hero {
@@ -134,12 +137,11 @@ body {
     margin-right: 10px;
     color: #fff;
     background-color: #1E90FF;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .hero__skills:hover {
-    background-color: #fff;
-    color: #1E90FF;
-    border-color: #1E90FF;
+    opacity: 0.7;
 }
 
 .hero__about {
@@ -148,8 +150,7 @@ body {
     border-color: #1E90FF;
 }
 .hero__about:hover {
-    color: #fff;
-    background-color: #1E90FF;
+    opacity: 0.7;
 }
 
 .mobile-nav {
@@ -199,7 +200,19 @@ body {
 
     .blur {
         filter: blur(5px);
+        animation: blur 500ms ease;
     }
+    
+    @keyframes blur {
+        0% {
+            filter: blur(0px);
+        }
+        100% {
+            filter: blur(5px);
+        }
+    }
+
+
     .height {
         height: 70px;
         display: block;
@@ -256,4 +269,165 @@ body {
     .hero__aforizm {
         font-size: 18px;
     }
+
+    .hero__scroll {
+        position: relative;
+        text-align: center;
+        margin: 35px 0 0;
+        font-weight: 600;
+        font-size: 14px;
+        color: #333333;
+    }
+    .hero__scroll::after {
+        position: absolute;
+        width: 28px;
+        left: calc(50% - 16px);
+        top: 10px;
+        height: 28px;
+        background-image: url('../images/down-arrow.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        animation: scroll ease 2s infinite;
+        content: '';
+    }
+
+    @keyframes scroll {
+        0% {
+            top: 12px;
+        }
+        50% {
+            top: 22px;
+        }
+        100% {
+            top: 12px;
+        }
+    }
+}
+
+.about {
+    margin-top: 50px;
+    padding-top: 50px;
+}
+
+.about__title {
+    padding-bottom: 5px;
+    color: #333;
+    font-size: 32px;
+    font-weight: 500;
+    border-bottom: 1px solid rgb(128, 128, 128, 0.5);
+}
+
+.about__body {
+    padding-top: 20px;
+    font-size: 24px;
+    font-style: italic;
+}
+
+@media only screen and (max-width: 576px) {
+    .about {
+        margin-top: 0;
+    }
+
+    .about__body {
+        font-size: 18px;
+    }
+}
+
+
+
+
+
+.skills {
+    padding-top: 50px;
+}
+
+.skills__title {
+    padding-bottom: 8px;
+    color: #333;
+    font-size: 32px;
+    font-weight: 500;
+    border-bottom: 1px solid rgb(128, 128, 128, 0.5);
+}
+
+.skills__body {
+    padding-top: 50px;
+}
+
+.skills__item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 60px;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid gray;
+}
+
+.skills__item span {
+    display: inline-block;
+    padding-top: 5px;
+}
+
+.skills__item::before {
+    position: absolute;
+    top: -24px;
+    font-weight: 600;
+    color: #333;
+}
+.skills__item:first-child::before {
+    content: 'HTML 95%';
+    color: #E44D26;
+}
+.skills__item:nth-child(2):before {
+    content: 'CSS 90%';
+    color: #42A5F5;
+}
+.skills__item:nth-child(3):before {
+    content: 'SASS 90%';
+    color: #C93E6E;
+}
+.skills__item:nth-child(4):before {
+    content: 'BOOTSTRAP 70%';
+    color: #007ACC;
+}
+.skills__item:nth-child(5):before {
+    content: 'JAVA SCRIPT 60%';
+    color: #FFCA28;
+}
+
+.skills__item:nth-child(6):before {
+    content: 'REACT JS (beginner) 10%';
+    color: #00C0E3;
+}
+
+
+
+.skills__html {
+    width: 95%;
+    background-color: #E44D26;
+}
+.skills__css {
+    width: 90%;
+    background-color: #42A5F5;
+}
+
+.skills__sass {
+    width: 90%;
+    background-color: #C93E6E;
+}
+
+.skills__bs {
+    width: 70%;
+    background-color: #007ACC;
+}
+
+.skills__js {
+    width: 60%;
+    background-color: #FFCA28;
+}
+
+.skills__react {
+    width: 10%;
+    background-color: #00C0E3;
 }
