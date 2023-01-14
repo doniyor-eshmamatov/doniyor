@@ -174,7 +174,7 @@ body {
 }
 
 .height {
-    height: 70px;
+    height: 80px;
     display: block;
     overflow: hidden;
     animation-name: open;
@@ -211,12 +211,15 @@ body {
         z-index: 3;
         background-color:#fff;
     }
+    .mobile-nav__link {
+        font-weight: 600;
+    }
     @keyframes open {
         0% {
             height: 0;
         }
         100% {
-            height: 70px;
+            height: 80px;
         }
     }
 
@@ -240,7 +243,7 @@ body {
         list-style-type: none;
     }
     .mobile-nav__item:first-child {
-        margin-bottom: 5px;
+        margin-bottom: 10px;
     }
 
     .mobile-nav__link {
